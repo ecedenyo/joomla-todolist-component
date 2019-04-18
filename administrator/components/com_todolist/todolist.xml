@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="component" version="3.9" method="upgrade">
+    <name>com_todolist</name>
+    <author>Cory Webb / Emerson Cedeño</author>
+    <creationDate>April 2019</creationDate>
+    <version>0.0.1</version>
+    <description>COM_TODOLIST_XML_DESCRIPTION</description>
+
+    <files folder="site">
+        <filename>todolist.php</filename>
+    </files>
+
+    <administration>
+        <menu>com_todolist</menu>
+        <submenu>
+            <menu like="option=com_todolist&amp;view=items" view="items" alt="Todo List/Items">COM_TODOLIST_TITLE_ITEMS</menu>
+            <menu link="option=com_categories&amp;extension=com_todolist" view="categories" alt="Todo List/Categories">COM_TODOLIST_ITEMS_CATID</menu>
+        </submenu>
+        <files folder="admin">
+            <filename>todolist.php</filename>
+        </files>
+    </administration>
+</extension>
