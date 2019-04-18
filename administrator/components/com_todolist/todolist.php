@@ -3,4 +3,8 @@
  * To-do list administrator entry point
  */
 
-echo 'Hello World.';
+$params = JComponentHelper::getParams('com_todolist');
+
+$message = $params->get('message', 'Let\'s do this!');
+
+echo $message;
