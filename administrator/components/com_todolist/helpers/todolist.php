@@ -41,3 +41,9 @@ class TodolistHelpersTodolist
         return $result;
     }
 }
+
+// Showing sidebar in Categories extension for this component
+class TodolistHelper extends TodolistHelpersTodolist
+{
+    
+}
