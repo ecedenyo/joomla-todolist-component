@@ -1,0 +1,14 @@
+CREATE TABLE `#__todolist_items` ( 
+    `id` INT UNSIGNED NOT NULL AUTO_INCREMENT, 
+    `catid` INT UNSIGNED NOT NULL DEFAULT '0', 
+    `state` TINYINT(3) NOT NULL DEFAULT '1', 
+    `title` VARCHAR(255) NOT NULL DEFAULT '', 
+    `description` MEDIUMTEXT NOT NULL, 
+    `status` TINYINT(3) NOT NULL DEFAULT '0', 
+    `ordering` INT NOT NULL, 
+    `created` DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP, 
+    `created_by` INT NOT NULL DEFAULT '0', 
+    `modified` DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP, 
+    `modified_by` INT NOT NULL DEFAULT '0', 
+    PRIMARY KEY  (`id`)
+) DEFAULT CHARSET=utf8;
