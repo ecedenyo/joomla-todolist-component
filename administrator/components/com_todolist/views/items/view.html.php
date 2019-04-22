@@ -36,52 +36,50 @@ class TodolistViewItems extends JViewLegacy
     protected function addToolbar()
     {
         $state = $this->get('State');
-        // $canDo = TodolistHelpersTodolist::getActions();
+        $canDo = TodolistHelpersTodolist::getActions();
 
         JToolBarHelper::title(JText::_('COM_TODOLIST_TITLE_ITEMS'), 'items.png');
 
-        // if ($canDo->get('core.create'))
-        // {
+        if ($canDo->get('core.create'))
+        {
             JToolBarHelper::addNew('item.add', 'JTOOLBAR_NEW');
             JToolbarHelper::custom('items.duplicate', 'copy.png', 'copy_f2.png', 'JTOOLBAR_DUPLICATE', true);
-        // }
+        }
 
         if (isset($this->items[0]))
         {
-            // if($canDo->get('core.edit'))
-            // {
+            if($canDo->get('core.edit'))
+            {
                 JToolBarHelper::editList('item.edit', 'JTOOLBAR_EDIT');
-            // }
+            }
 
-            // if($canDo->get('core.edit.state'))
-            // {
+            if($canDo->get('core.edit.state'))
+            {
                 JToolBarHelper::divider();
                 JToolBarHelper::custom('items.publish', 'publish.png', 'publish_f2.png', 'JTOOLBAR_PUBLISH', true);
                 JToolBarHelper::custom('items.unpublish', 'unpublish.png', 'unpublish_f2.png', 'JTOOLBAR_UNPUBLISH', true);
 
                 JToolBarHelper::divider();
                 JToolBarHelper::archiveList('items.archive', 'JTOOLBAR_ARCHIVE');
-            // }
+            }
 
         }
 
-        // if ($state->get('filter.state') == -2 && $canDo->get('core.delete'))
-        if ($state->get('filter.state') == -2)
+        if ($state->get('filter.state') == -2 && $canDo->get('core.delete'))
         {
             JToolBarHelper::deleteList('', 'items.delete', 'JTOOLBAR_EMPTY_TRASH');
             JToolBarHelper::divider();
         }
-        // elseif ($canDo->get('core.edit.state'))
-        else
+        elseif ($canDo->get('core.edit.state'))
         {
             JToolBarHelper::trash('items.trash', 'JTOOLBAR_TRASH');
             JToolBarHelper::divider();
         }
 
-        // if ($canDo->get('core.admin'))
-        // {
+        if ($canDo->get('core.admin'))
+        {
             JToolBarHelper::preferences('com_todolist');
-        // }
+        }
 
         JHtmlSidebar::setAction('index.php?option=com_todolist&view=items');
 
