@@ -3,8 +3,12 @@
  * To-do list administrator entry point
  */
 
-$params = JComponentHelper::getParams('com_todolist');
+defined('_JEXEC') or die;
 
-$message = $params->get('message', 'Let\'s do this!');
+jimport('joomla.application.component.controller');
 
-echo $message;
+JLoader::registerPrefix('Todolist', JPATH_COMPONENT_ADMINISTRATOR);
+
+$controller = JControllerLegacy::getInstance('Todolist');
+$controller->execute(JFactory::getApplication()->input->get('task'));
+$controller->redirect();
