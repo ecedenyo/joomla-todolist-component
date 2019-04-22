@@ -31,7 +31,7 @@ class TodolistControllerItems extends JControllerAdmin
         }
         catch (Exception $e)
         {
-            JFactory::getApplication()->enqueueMessage('On file items.php: ' . $e->getMessage(), 'warning');
+            JFactory::getApplication()->enqueueMessage($e->getMessage(), 'warning');
         }
 
         $this->setRedirect('index.php?option=com_todolist&view=items');
