@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<config>
+    <fieldset label="COM_TODOLIST" name="todolist">
+        <field name="message" type="textarea" default="" label="COM_TODOLIST_PARAM_MESSAGE_LABEL" description="COM_TODOLIST_PARAM_MESSAGE_DESC" rows="10" cols="5"></field>
+    </fieldset>
+
+    <fieldset name="permissions" description="JCONFIG_PERMISSIONS_DESC" label="JCONFIG_PERMISSIONS_LABEL">
+        
+        <field
+            name="rules"
+            type="rules"
+            component="com_todolist"
+            class="inputbox"
+            filter="rules"
+            validate="rules"
+            label="JCONFIG_PERMISSIONS_LABEL"
+            section="component"
+        />
+
+    </fieldset>
+</config>

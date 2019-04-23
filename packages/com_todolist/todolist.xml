@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="component" version="3.9" method="upgrade">
+    <name>com_todolist</name>
+    <author>Cory Webb / Emerson Cedeño</author>
+    <creationDate>April 2019</creationDate>
+    <version>0.0.1</version>
+    <description>COM_TODOLIST_XML_DESCRIPTION</description>
+    
+    <!-- Script to be used during installation -->
+    <scriptfile>script.php</scriptfile>
+    
+    <!-- SQL scripts to be used when (un)installing the component -->
+    <install>
+        <sql>
+            <file driver="mysql" charset="utf8">sql/install.mysql.utf8.sql</file>
+        </sql>
+    </install>
+    <uninstall>
+        <sql>
+            <file driver="mysql" charset="utf8">sql/uninstall.mysql.utf8.sql</file>
+        </sql>
+    </uninstall>
+    
+    <!-- Frontend files -->
+    <files folder="site">
+        <filename>todolist.php</filename>
+        <filename>controller.php</filename>
+        <filename>router.php</filename>
+        <folder>controllers</folder>
+        <folder>views</folder>
+        <folder>models</folder>
+    </files>
+    <languages folder="languages/site">
+        <language tag="en-GB">en-GB/en-GB.com_todolist.ini</language>
+    </languages>
+    
+    <!-- Administration (backend) setup -->
+    <administration>
+        <menu>com_todolist</menu>
+        <submenu>
+            <menu like="option=com_todolist&amp;view=items" view="items" alt="Todo List/Items">COM_TODOLIST_TITLE_ITEMS</menu>
+            <menu link="option=com_categories&amp;extension=com_todolist" view="categories" alt="Todo List/Categories">COM_TODOLIST_ITEMS_CATID</menu>
+        </submenu>
+        <files folder="admin">
+            <filename>access.xml</filename>
+            <filename>config.xml</filename>
+            <filename>controller.php</filename>
+            <filename>todolist.php</filename>
+            <folder>controllers</folder>
+            <folder>helpers</folder>
+            <folder>models</folder>
+            <folder>sql</folder>
+            <folder>tables</folder>
+            <folder>views</folder>
+        </files>
+        <languages folder="languages/administrator">
+            <language tag="en-GB">en-GB/en-GB.com_todolist.ini</language>
+            <language tag="en-GB">en-GB/en-GB.com_todolist.sys.ini</language>
+        </languages>
+    </administration>
+</extension>
