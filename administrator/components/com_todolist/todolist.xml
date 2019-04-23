@@ -30,6 +30,9 @@
         <folder>views</folder>
         <folder>models</folder>
     </files>
+    <languages folder="languages/site">
+        <language tag="en-GB">en-GB/en-GB.com_todolist.ini</language>
+    </languages>
     
     <!-- Administration (backend) setup -->
     <administration>
