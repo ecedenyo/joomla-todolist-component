@@ -26,6 +26,8 @@
         <filename>todolist.php</filename>
         <filename>controller.php</filename>
         <folder>controllers</folder>
+        <folder>views</folder>
+        <folder>models</folder>
     </files>
     
     <!-- Administration (backend) setup -->
