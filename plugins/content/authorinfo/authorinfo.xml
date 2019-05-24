@@ -1,0 +1,7 @@
+<?xml version="1.0" enconding="utf-8"?>
+<extension version="3.9" type="plugin" group="content" method="upgrade">
+    <name>plg_content_authorinfo</name>
+    <files>
+        <filename plugin="authorinfo">authorinfo.php</filename>
+    </files>
+</extension>
