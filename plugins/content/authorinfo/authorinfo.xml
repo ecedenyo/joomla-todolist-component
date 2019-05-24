@@ -16,12 +16,28 @@
     <config>
         <fields name="params">
             <fieldset name="basic">
-                <field
-                    name="test"
+                <field 
+                    name="cat_include"
+                    type="category"
+                    extension="com_content"
+                    multiple="true"
+                    label="PLG_CONTENT_AUTHORINFO_CATEGORY_INCLUDE_LABEL"
+                    description="PLG_CONTENT_AUTHORINFO_CATEGORY_INCLUDE_DESC"
+                    />
+                <field 
+                    name="cat_exclude"
+                    type="category"
+                    extension="com_content"
+                    multiple="true"
+                    label="PLG_CONTENT_AUTHORINFO_CATEGORY_EXCLUDE_LABEL"
+                    description="PLG_CONTENT_AUTHORINFO_CATEGORY_EXCLUDE_DESC"
+                    />
+                <field 
+                    name="custom_text"
                     type="text"
-                    label="Test"
-                    description="This is just a test."
-                    default="" />
+                    label="PLG_CONTENT_AUTHORINFO_CUSTOM_TEXT_LABEL"
+                    description="PLG_CONTENT_AUTHORINFO_CUSTOM_TEXT_DESC"
+                    />
             </fieldset>
         </fields>
     </config>
