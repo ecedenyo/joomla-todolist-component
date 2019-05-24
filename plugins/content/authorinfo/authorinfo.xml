@@ -1,7 +1,28 @@
 <?xml version="1.0" enconding="utf-8"?>
 <extension version="3.9" type="plugin" group="content" method="upgrade">
     <name>plg_content_authorinfo</name>
+    <author>Emerson Cedeno</author>
+    <creationDate>May 2019</creationDate>
+    <copyright>Copyright (C) 2019</copyright>
+    <license>GNU General Public License version 2 or later</license>
+    <authorEmail>webmaster@stuffledge.com</authorEmail>
+    <authorUrl>https://about.me/ecedenyo</authorUrl>
+    <version>0.0.1</version>
+    <description>PLG_CONTENT_AUTHORINFO_XML_DESCRIPTION</description>
     <files>
         <filename plugin="authorinfo">authorinfo.php</filename>
     </files>
+    <languages></languages>
+    <config>
+        <fields name="params">
+            <fieldset name="basic">
+                <field
+                    name="test"
+                    type="text"
+                    label="Test"
+                    description="This is just a test."
+                    default="" />
+            </fieldset>
+        </fields>
+    </config>
 </extension>
